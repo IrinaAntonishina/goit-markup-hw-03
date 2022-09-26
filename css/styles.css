@@ -55,6 +55,9 @@ img {
 .navigation {
   display: flex;
   align-items: center;
+}
+
+.header {
   border-bottom: 1px solid #ececec;
 }
 
@@ -86,8 +89,8 @@ img {
 
 .header-logo {
   margin-right: 93px;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 24px;
+  padding-bottom: 25px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -133,14 +136,13 @@ span {
 /* -----------------Hero-------------- */
 
 .hero {
-  padding: 200px;
+  padding: 200px 0px;
   background-color: var(--backcolor-grey);
   text-align: center;
-  margin-bottom: 94px;
 }
 
 .hero-title {
-  width: 696px;
+  max-width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -175,11 +177,12 @@ span {
 
 /* ---------------Feature---------------- */
 .feature {
-  margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .feature-item {
-  flex-basis: calc(100% / 4 - 30px);
+  flex-basis: calc(100% - 90px / 4);
 }
 
 .feature-title {
@@ -200,7 +203,7 @@ span {
 
 .feature-list {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
 }
 
 /* -------------Projects--------------- */
@@ -214,14 +217,17 @@ span {
   margin-bottom: 50px;
 }
 
+.projects {
+  padding-bottom: 94px;
+}
+
 .projects-list {
   display: flex;
-  margin-bottom: 94px;
-  justify-content: space-between;
+  gap: 30px;
 }
 
 .projects-item {
-  flex-basis: calc(100% / 3 - 30px);
+  flex-basis: calc(100% -60px / 3);
 }
 
 /* -------------Team--------------- */
@@ -340,9 +346,13 @@ span {
   overflow: hidden;
 }
 
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .button > .button-list {
   display: flex;
-  margin-top: 100px;
   margin-bottom: 50px;
   gap: 8px;
   justify-content: center;
@@ -366,21 +376,21 @@ span {
   color: var(--text-white);
 }
 
+
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   background-color: var(--color-accent);
   color: var(--text-white);
 }
+
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  flex-basis: calc(100% / 9 - 30px);
-  justify-content: space-between;
-  margin-bottom: 94px;
+  gap: 30px;
 }
-.portfolio-list:nth-child(2n) {
-margin-left: 30px;
-margin-right: 30px;
+
+.portfolio-item {
+  flex-basis: calc(100% / 3 - 30px);
 }
 
 .portfolio-title {
@@ -397,12 +407,9 @@ margin-right: 30px;
   letter-spacing: 0.03em;
   color: var(--color-text);
 }
-.portfolio-list .portfolio-item + .portfolio-item {
-  margin-bottom: 30px;
-}
 
 .link-text {
   border: 1px solid #eeeeee;
-  border-top: 0px;
+  border-top: none;
   padding: 20px 24px;
 }
